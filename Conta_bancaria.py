@@ -16,7 +16,7 @@ while True:
             saldo = valor
             extrato = "" f"Depósito: R$ {valor: .2f}\n"
         else:
-            print("Operação fahou! O valor informado é inválido.")
+            print("Operação negada! O valor informado é inválido.")
 
     elif opcao == 2:
         valor = float(input("Informe o valor do saque: "))
@@ -25,11 +25,11 @@ while True:
         excedeu_saques = numero_saques > LIMITE_SAQUES
 
         if excedeu_saldo:
-            print("Operação fahou! O valor informado é inválido.")
+            print("Operação negada! O valor informado é inválido.")
         elif excedeu_limite:
-            print("Operação falhou! O valor do saque excede o limite.")
+            print("Operação negada! O valor do saque excede o limite.")
         elif excedeu_saques:
-            print("Operação falhou! Número máximo de saques excedido.")
+            print("Operação negada! Número máximo de saques excedido.")
 
         elif valor > 0:
             saldo -= valor
@@ -37,7 +37,7 @@ while True:
             numero_saques += 1
 
         else:
-            print("Operação falhou! O valor informado é inválido.")
+            print("Operação negada! O valor informado é inválido.")
 
     elif opcao == 3:
         print("\n================ EXTRATO ================")
