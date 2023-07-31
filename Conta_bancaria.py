@@ -20,16 +20,16 @@ while True:
 
     elif opcao == 2:
         valor = float(input("Informe o valor do saque: "))
-        excedeu_saldo = valor > saldo
-        excedeu_limite = valor > limite
-        excedeu_saques = numero_saques > LIMITE_SAQUES
+        saldo_excedido = valor > saldo
+        limite_excedido = valor > limite
+        saques_excedidos = numero_saques > LIMITE_SAQUES
 
-        if excedeu_saldo:
-            print("Operação negada! O valor informado é inválido.")
-        elif excedeu_limite:
-            print("Operação negada! O valor do saque excede o limite.")
-        elif excedeu_saques:
-            print("Operação negada! Número máximo de saques excedido.")
+        if saldo_excedido:
+            print("Operação negada! Você não possui saldo para essa transação.")
+        elif limite_excedido:
+            print("Operação negada! O valor do saque excede o limite disponivel.")
+        elif saques_excedidos:
+            print("Operação negada! Número máximo de saques diários excedido.")
 
         elif valor > 0:
             saldo -= valor
